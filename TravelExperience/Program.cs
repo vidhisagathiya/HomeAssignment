@@ -5,9 +5,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Enable controller-based API endpoints
 builder.Services.AddControllers();
 
-// Use SQLite and connect using config value (DefaultConnection from appsettings.json)
+// Use MS SQL and connect using config value (DefaultConnection from appsettings.json)
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Inject TripService wherever ITripService is used
 builder.Services.AddScoped<ITripService, TripService>();
