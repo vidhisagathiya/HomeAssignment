@@ -1,4 +1,4 @@
-# TravelExperience Assignment
+# TravelExperience 
 
 This project implements a simple API to create travel experiences using ASP.NET Core and Entity Framework Core with Microsoft SQL Server running in Docker. 
 
